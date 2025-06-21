@@ -1,0 +1,168 @@
+:root {
+  --roxo: #8e6fa8;
+  --rosa: #e7c4c7;
+  --bege: #fdf7f0;
+  --cinza: #333;
+  --branco: #fff;
+  --font-main: 'Montserrat', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bege);
+  color: var(--cinza);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.hero {
+  background-color: var(--roxo);
+  color: var(--branco);
+  padding: 60px 0;
+}
+
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.hero-content .text {
+  flex: 1;
+}
+
+.hero-content .image img {
+  max-width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.lead {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--rosa);
+  color: var(--cinza);
+}
+
+.btn-primary:hover {
+  background-color: #d9a8af;
+}
+
+.btn-secondary {
+  background-color: var(--roxo);
+  color: var(--branco);
+  margin-top: 20px;
+}
+
+.btn-secondary:hover {
+  background-color: #734d8c;
+}
+
+.benefits {
+  background-color: var(--branco);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.benefits h2 {
+  color: var(--roxo);
+  margin-bottom: 30px;
+}
+
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.benefit-grid .item {
+  background: var(--rosa);
+  padding: 20px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+}
+
+.quem {
+  background-color: var(--bege);
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.quem h2 {
+  color: var(--roxo);
+  margin-bottom: 20px;
+}
+
+.autora {
+  background-color: var(--rosa);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.autora h2 {
+  color: var(--roxo);
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: var(--roxo);
+  color: var(--branco);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content .image img {
+    margin-top: 20px;
+  }
+}
+
+/* Zoom effect na capa */
+.capa-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.capa-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
